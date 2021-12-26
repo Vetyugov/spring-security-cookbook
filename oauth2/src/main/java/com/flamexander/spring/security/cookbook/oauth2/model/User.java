@@ -1,6 +1,5 @@
-package com.flamexander.spring.security.cookbook.dao.entities;
+package com.flamexander.spring.security.cookbook.oauth2.model;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 
 import javax.persistence.*;

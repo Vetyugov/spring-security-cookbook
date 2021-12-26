@@ -3,6 +3,8 @@ package com.flamexander.spring.security.cookbook.dao.controllers;
 import com.flamexander.spring.security.cookbook.dao.entities.User;
 import com.flamexander.spring.security.cookbook.dao.services.UserService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -29,6 +31,7 @@ public class DemoController {
     }
 
     @GetMapping("/admin")
+    // @PreAuthorize("hasRole('ADMIN')")
     public String adminPage() {
         return "admin";
     }

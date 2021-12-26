@@ -1,11 +1,9 @@
-package com.flamexander.spring.security.cookbook.dao.services;
+package com.flamexander.spring.security.cookbook.oauth2.services;
 
-import com.flamexander.spring.security.cookbook.dao.entities.Role;
-import com.flamexander.spring.security.cookbook.dao.entities.User;
-import com.flamexander.spring.security.cookbook.dao.repositories.UserRepository;
+import com.flamexander.spring.security.cookbook.oauth2.model.Role;
+import com.flamexander.spring.security.cookbook.oauth2.model.User;
+import com.flamexander.spring.security.cookbook.oauth2.repositories.UserRepository;
 import lombok.RequiredArgsConstructor;
-import org.springframework.context.annotation.Profile;
-import org.springframework.security.access.annotation.Secured;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;

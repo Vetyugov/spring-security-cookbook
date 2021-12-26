@@ -12,6 +12,6 @@ create table authorities (
 );
 
 insert into users (username, password, enabled) values
-('admin1', '{bcrypt}$2y$12$mFUdPh8.ESnhu.eyDjxrYuSigUIOboDP94mt7vuNhf604Yw0iuKQa', true);
+('admin', '{bcrypt}$2y$12$mFUdPh8.ESnhu.eyDjxrYuSigUIOboDP94mt7vuNhf604Yw0iuKQa', true);
 
-insert into authorities (username, authority) values ('admin1', 'ROLE_ADMIN');
+insert into authorities (username, authority) values ('admin', 'ROLE_ADMIN');

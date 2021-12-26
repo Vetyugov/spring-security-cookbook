@@ -1,6 +1,8 @@
 package com.flamexander.spring.security.cookbook.inmemory.controllers;
 
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.HttpCookie;
+import org.springframework.security.core.Authentication;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -11,8 +13,6 @@ import java.security.Principal;
 @RestController
 @RequiredArgsConstructor
 public class DemoController {
-    private final UserDetailsService userDetailsService;
-
     @GetMapping("/")
     public String homePage() {
         return "home";
@@ -34,8 +34,8 @@ public class DemoController {
     }
 
     @GetMapping("/user_info")
-    public String daoTestPage(Principal principal) {
-        UserDetails userDetails = userDetailsService.loadUserByUsername(principal.getName());
-        return "Authenticated user info: " + userDetails.getUsername() + " authorities: " + userDetails.getAuthorities();
+    public String daoTestPage(Authentication authentication) {
+
+        return "Authenticated user info: " + authentication.getName() + " authorities: " + authentication.getAuthorities();
     }
 }
