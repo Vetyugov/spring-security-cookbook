@@ -30,10 +30,16 @@ public class DemoController {
         return "authenticated";
     }
 
-    @GetMapping("/admin")
+    @GetMapping("/msgs")
     // @PreAuthorize("hasRole('ADMIN')")
-    public String adminPage() {
-        return "admin";
+    public String msgsPage() {
+        return "Input messages";
+    }
+
+    @GetMapping("/admin/msgs")
+    // @PreAuthorize("hasRole('ADMIN')")
+    public String adminMsgsPage() {
+        return "Input messages for admin";
     }
 
     @GetMapping("/user_info")
